@@ -11,11 +11,11 @@
 </footer>
 </div>
 </div>
-<script src="vendors/jquery/jquery.min.js"></script>
-<script src="vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<script src="dist/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url; ?>/vendors/jquery/jquery.min.js"></script>
+<script src="<?= base_url; ?>/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="<?= base_url; ?>/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="dist/js/main.js"></script>
+<script src="<?= base_url; ?>/dist/js/main.js"></script>
 </body>
 
 </html>
