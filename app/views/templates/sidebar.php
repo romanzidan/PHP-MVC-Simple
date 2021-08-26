@@ -75,7 +75,7 @@
                 </li>
 
                 <li class="sidebar-item  ">
-                    <a href="#" class='sidebar-link text-white' style="background-color: #e46774;">
+                    <a href="<?= base_url; ?>/auth/logout" class='sidebar-link text-white' style="background-color: #e46774;">
                         <i class="bi bi-arrow-right-square-fill text-white" aria-hidden="true"></i>
                         <span>Logout</span>
                     </a>

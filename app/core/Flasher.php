@@ -9,12 +9,11 @@
 
         public static function Message(){
             if (isset($_SESSION['msg'])) {
-                echo '<div class="alert alert-'.$_SESSION['msg']['type'].' alert-dismissible fade show" role="alert">
+                echo '<div class="alert alert-'.$_SESSION['msg']['type'].' alert-dismissible fade show text-center" role="alert">
                 '.$_SESSION['msg']['message'].'
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>';
             }
-
             unset($_SESSION['msg']);
         }
     }
