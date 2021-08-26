@@ -21,7 +21,7 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item <?php if($data['title'] == 'Category') echo 'active'; ?>">
+                <li class="sidebar-item <?php if(stripos($data['title'],'Category') !== FALSE) echo 'active'; ?>">
                     <a href="<?= base_url; ?>/category" class='sidebar-link'>
                         <i class="bi bi-list-ul"></i>
                         <span>Category</span>

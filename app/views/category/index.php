@@ -7,7 +7,7 @@
                     <section class="section">
                         <div class="card">
                             <div class="card-header">
-                                Categories Datatable
+                                <a href="<?= base_url;?>/category/create" class="btn float-right btn-xs btn btn-primary">Create Category</a>
                             </div>
                             <div class="card-body">
                                 <table class="table table-striped" id="table1">
@@ -27,8 +27,11 @@
                                             <td><?= $no ?></td>
                                             <td><?= $row['name'] ?></td>
                                             <td>
-                                            <a href="<?= base_url; ?>/category/edit/<?= $row['id'] ?>" class="btn btn-primary">Edit</a> 
-                                            <a href="<?= base_url; ?>/category/hapus/<?= $row['id'] ?>" class="btn btn-danger" onclick="return confirm('Hapus data?');">Hapus</a>
+                                                <a href="<?= base_url; ?>/category/edit/<?= $row['id'] ?>"
+                                                    class="btn btn-primary">Edit</a>
+                                                <a href="<?= base_url; ?>/category/hapus/<?= $row['id'] ?>"
+                                                    class="btn btn-danger"
+                                                    onclick="return confirm('Hapus data?');">Delete</a>
                                             </td>
                                         </tr>
                                         <?php 
