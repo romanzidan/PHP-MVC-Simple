@@ -30,9 +30,9 @@
                                             <td>
                                                 <a href="<?= base_url; ?>/category/edit/<?= $row['id'] ?>"
                                                     class="btn btn-primary">Edit</a>
-                                                <a href="<?= base_url; ?>/category/hapus/<?= $row['id'] ?>"
+                                                <a href="<?= base_url; ?>/category/delete/<?= $row['id'] ?>"
                                                     class="btn btn-danger"
-                                                    onclick="return confirm('Hapus data?');">Delete</a>
+                                                    onclick="return confirm('Delete Category?');">Delete</a>
                                             </td>
                                         </tr>
                                         <?php 

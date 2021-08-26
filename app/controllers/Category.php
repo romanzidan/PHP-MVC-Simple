@@ -16,7 +16,7 @@
 
         public function edit($id){
             $data['title'] = 'Detail Category';
-            $data['category'] = $this->model('CategoryModel')->getCategoryById($id);
+                $data['category'] = $this->model('CategoryModel')->getCategoryById($id);
 
             $this->view('templates/header', $data);
             $this->view('templates/sidebar', $data);
@@ -53,7 +53,7 @@
         public function updateCategory(){
             if (empty($_POST['name'])) {
                 Flasher::setMessage('Input field is required', 'danger');
-                header('location: '. base_url. '/category/create');
+                header('location: '. base_url. '/category/edit/'.$_POST['id']);
                 exit;
             }
             if ($this->model('CategoryModel')->updateCategory($_POST) > 0) {
@@ -68,7 +68,15 @@
         }
 
         public function delete($id){
-
+            if ($this->model('CategoryModel')->deleteCategory($id) > 0) {
+                Flasher::setMessage('Category deleted successfully', 'success');
+                header('location: '.base_url.'/category');
+                exit;
+            }else{
+                Flasher::setMessage('Failed to delete Category', 'danger');
+                header('location: '.base_url.'/category');
+                exit;
+            }
         }
     }
 ?>
