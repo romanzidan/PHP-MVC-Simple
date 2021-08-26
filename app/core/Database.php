@@ -1,7 +1,7 @@
 <?php
     class Database{
         private $host = DB_HOST;
-        private $iser = DB_USER;
+        private $user = DB_USER;
         private $pass = DB_PASS;
         private $dbnm = DB_NAME;
 
@@ -48,7 +48,7 @@
         }
 
         public function execute(){
-            $this->stmt->execture();
+            $this->stmt->execute();
         }
 
         public function resultSet(){
