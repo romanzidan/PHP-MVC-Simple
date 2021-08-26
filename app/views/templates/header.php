@@ -19,10 +19,6 @@
     <link rel="shortcut icon" href="<?= base_url; ?>/dist/images/favicon.svg" type="image/x-icon">
 
     <style>
-        footer{
-            position:absolute;
-            bottom:0;
-        }
     </style>
 </head>
 

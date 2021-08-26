@@ -10,6 +10,7 @@
                                 <a href="<?= base_url;?>/category/create" class="btn float-right btn-xs btn btn-primary">Create Category</a>
                             </div>
                             <div class="card-body">
+                                <?php Flasher::Message(); ?>
                                 <table class="table table-striped" id="table1">
                                     <thead>
                                         <tr>

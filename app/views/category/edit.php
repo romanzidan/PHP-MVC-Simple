@@ -15,15 +15,16 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form role="form" action="<?= base_url; ?>/category/saveCategory" method="POST" enctype="multipart/form-data">
+                            <form role="form" action="<?= base_url; ?>/category/updateCategory" method="POST" enctype="multipart/form-data">
                                 <div class="col-md-4">
                                     <label>Category Name</label>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="form-group has-icon-left">
+                                    <input type="hidden" name="id" value="<?= $data['category']['id']; ?>">
                                         <div class="position-relative">
                                             <input type="text" class="form-control" placeholder="Input category name..."
-                                                id="first-name-icon" name="name" maxlength="30" required>
+                                                id="first-name-icon" name="name" value="<?= $data['category']['name'] ?>" maxlength="30" required>
                                             <div class="form-control-icon">
                                                 <i class="bi bi-bookmark-fill"></i>
                                             </div>

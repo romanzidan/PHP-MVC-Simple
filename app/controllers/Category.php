@@ -15,7 +15,13 @@
         }
 
         public function edit($id){
+            $data['title'] = 'Detail Category';
+            $data['category'] = $this->model('CategoryModel')->getCategoryById($id);
 
+            $this->view('templates/header', $data);
+            $this->view('templates/sidebar', $data);
+            $this->view('category/edit', $data);
+            $this->view('templates/footer');
         }
 
         public function create(){
@@ -28,17 +34,37 @@
         }
 
         public function saveCategory(){
+            if (empty($_POST['name'])) {
+                Flasher::setMessage('Input field is required', 'danger');
+                header('location: '. base_url. '/category/create');
+                exit;
+            }
             if ($this->model('CategoryModel')->createCategory($_POST) > 0) {
-                Flasher::setMessage('Berhasil', 'Ditambahkan', 'success');
+                Flasher::setMessage('Success created Category.', 'success');
                 header('location: '. base_url. '/category');
                 exit;
             }else{
-                
+                Flasher::setMessage('Failed to create Category', 'danger');
+                header('location: '.base_url.'/category');
+                exit;
             }
         }
 
         public function updateCategory(){
-
+            if (empty($_POST['name'])) {
+                Flasher::setMessage('Input field is required', 'danger');
+                header('location: '. base_url. '/category/create');
+                exit;
+            }
+            if ($this->model('CategoryModel')->updateCategory($_POST) > 0) {
+                Flasher::setMessage('Success updated Category.', 'success');
+                header('location: '. base_url. '/category');
+                exit;
+            }else{
+                Flasher::setMessage('Failed to update Category', 'danger');
+                header('location: '.base_url.'/category');
+                exit;
+            }
         }
 
         public function delete($id){
