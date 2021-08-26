@@ -6,7 +6,7 @@
                     <a href="index"><img src="<?= base_url; ?>/dist/images/logo/logo.png" alt="Logo" srcset=""></a>
                 </div>
                 <div class="toggler">
-                    <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                    <a href="<?= base_url; ?>/" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                 </div>
             </div>
         </div>
@@ -15,9 +15,16 @@
                 <li class="sidebar-title">Menu</li>
 
                 <li class="sidebar-item <?php if($data['title'] == 'Dashboard') echo 'active'; ?>">
-                    <a href="index" class='sidebar-link'>
+                    <a href="<?= base_url; ?>/dashboard" class='sidebar-link'>
                         <i class="bi bi-grid-fill"></i>
                         <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item <?php if($data['title'] == 'Category') echo 'active'; ?>">
+                    <a href="<?= base_url; ?>/category" class='sidebar-link'>
+                        <i class="bi bi-list-ul"></i>
+                        <span>Category</span>
                     </a>
                 </li>
 
