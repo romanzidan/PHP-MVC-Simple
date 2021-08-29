@@ -1,5 +1,5 @@
 <?php 
-    define('base_url', 'http://localhost/mvcphp/public');
+    define('base_url', 'http://localhost/mvcphp');
 
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');

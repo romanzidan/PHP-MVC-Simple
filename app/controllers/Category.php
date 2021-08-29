@@ -3,7 +3,6 @@
         public function __construct()
         {
             if($_SESSION['session_login'] != 'active'){
-                Flasher::setMessage('Anda belum Login !', 'danger');
                 header('location: '.base_url.'/login');
                 exit;
             }
